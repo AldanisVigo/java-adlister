@@ -1,4 +1,4 @@
-package mvc_lecture.models.dao;
+package mvc_lecture.dao;
 
 import mvc_lecture.models.Product;
 

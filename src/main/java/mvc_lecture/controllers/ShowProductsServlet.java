@@ -1,9 +1,8 @@
-package mvc_lecture.models.controllers;
+package mvc_lecture.controllers;
 
+import mvc_lecture.dao.DaoFactory;
+import mvc_lecture.dao.Products;
 import mvc_lecture.models.Product;
-import mvc_lecture.models.dao.DaoFactory;
-import mvc_lecture.models.dao.Products;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
