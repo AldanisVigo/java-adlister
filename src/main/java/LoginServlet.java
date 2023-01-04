@@ -11,15 +11,18 @@ public class LoginServlet extends HttpServlet {
         request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        boolean validAttempt = username.equals("admin") && password.equals("password");
 
-        if (validAttempt) {
-            response.sendRedirect("/profile");
-        } else {
-            response.sendRedirect("/login");
+        if(password != null && username != null) {
+            boolean validAttempt = username.equals("admin") && password.equals("password");
+            if (validAttempt) {
+                request.getSession().setAttribute("isAdmin", true);
+                request.getRequestDispatcher("/profile").forward(request, response);
+            } else {
+                response.sendRedirect("/login");
+            }
         }
     }
 }
