@@ -4,17 +4,24 @@ public class Ad {
     private String title;
     private String description;
 
-    public Ad(long id, long userId, String title, String description) {
+    private int stateid;
+    private int countyid;
+
+    public Ad(long id, long userId, String title, String description,int stateid, int countyid) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
+        this.stateid = stateid;
+        this.countyid = countyid;
     }
 
-    public Ad(long userId, String title, String description) {
+    public Ad(long userId, String title, String description,int stateid, int countyid) {
         this.userId = userId;
         this.title = title;
         this.description = description;
+        this.stateid = stateid;
+        this.countyid = countyid;
     }
 
     public long getId() {
@@ -47,5 +54,21 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setStateid(int id){
+        this.stateid = id;
+    }
+
+    public int getStateid() {
+        return this.stateid;
+    }
+
+    public void setCountyid(int id){
+        this.countyid = id;
+    }
+
+    public int getCountyid() {
+        return this.countyid;
     }
 }
