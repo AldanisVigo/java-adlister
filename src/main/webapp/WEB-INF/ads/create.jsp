@@ -17,6 +17,8 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <input type="hidden" value="0" name="stateid" id="stateid">
+            <input type="hidden" value="0" name="countyid" id="countyid">
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
